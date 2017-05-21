@@ -5,18 +5,17 @@ const os = require('os');
 const port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
-
-   // const software = new os.cpus();
-   // const ip = os.networkInterfaces();
-   // const host = os.constants;
-   // console.log(software)
-   // console.log(ip)
-   // console.log(host)
    
    const ipAddress = req.headers['x-forwarded-for'] || req.connection.remoteAddress ;
-   console.log(req.ip)
+   const lang = req.headers['accept-language'];
+   const softName = req.headers['user-agent'].match(/\(([\w;\s]+)\)/);
 
-   res.send(req.ip);
+   const headerObejct = {
+      "ipaddress": ipAddress,
+      "language": lang,
+      "software": softName[1]
+   }
+   res.send(headerObejct);
 })
 
 app.listen(port, (req, err) => {
