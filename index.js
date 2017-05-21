@@ -1,7 +1,5 @@
 const express = require('express');
 let app = new express();
-const os = require('os');
-
 const port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
