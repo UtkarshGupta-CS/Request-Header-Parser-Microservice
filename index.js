@@ -27,6 +27,7 @@ app.get('/', (req, res) => {
 
    publicIp.v4().then(ip => {
       console.log(ip);
+      res.send(ip)
       //=> '46.5.21.123'
    });
 
@@ -34,7 +35,7 @@ app.get('/', (req, res) => {
       console.log(ip);
       //=> 'fe80::200:f8ff:fe21:67cf'
    });*/
-   res.send('fuck u');
+   // res.send('fuck u');
 })
 
 app.listen(port, (req, err) => {
