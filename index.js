@@ -24,10 +24,11 @@ app.get('/', (req, res) => {
    // console.log(ip)
    // console.log(host)
    console.log(req.headers['x-forwarded-for'] || req.connection.remoteAddress)*/
+   res.send(req.headers['x-forwarded-for'] || req.connection.remoteAddress)
 
    publicIp.v4().then(ip => {
       console.log(ip);
-      res.send(ip)
+      // res.send(ip)
       //=> '46.5.21.123'
    });
 
