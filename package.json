@@ -1,0 +1,24 @@
+{
+  "name": "whoami",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UtkarshGupta-CS/Request-Header-Parser-Microservice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UtkarshGupta-CS/Request-Header-Parser-Microservice/issues"
+  },
+  "homepage": "https://github.com/UtkarshGupta-CS/Request-Header-Parser-Microservice#readme",
+  "dependencies": {
+    "express": "^4.15.3",
+    "local-ip": "^1.0.1",
+    "public-ip": "^2.3.5"
+  }
+}
